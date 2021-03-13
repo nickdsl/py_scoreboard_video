@@ -130,11 +130,11 @@ def intro():
   global A_FIRST_SERVE
   global MAX_SET
   global MATCH_WIN_CONDITION
-  value = input("Enter team A name:")
+  value = input("Enter team A name: ")
   MATCH_DATA['A']['name'] = value
-  value = input("Enter team B name:")
+  value = input("Enter team B name: ")
   MATCH_DATA['B']['name'] = value
-  value = input("Type Y/y if team {} will serve first, else type N/n if team {} will serve:".format(
+  value = input("Type Y/y if team {} will serve first, else type N/n if team {} will serve: ".format(
     MATCH_DATA['A']['name'],
     MATCH_DATA['B']['name']))
   if (value == 'Y') or (value == 'y'):
@@ -147,7 +147,7 @@ def intro():
     A_FIRST_SERVE = False
     A_SERVE = A_FIRST_SERVE
     print("Team {} will serve the ball".format(MATCH_DATA['B']['name']))
-  value = input("Type Y/y for long game (5 sets) or N/n for short game (3 sets):")
+  value = input("Type Y/y for long game (5 sets) or N/n for short game (3 sets): ")
   if (value == 'Y') or (value == 'y'):
     MAX_SET = 5
     MATCH_WIN_CONDITION = 3
@@ -176,7 +176,7 @@ while not END_GAME:
       #если да, то переопределяем количество мячей по-умолчанию для победы
       MAX_SET_POINTS = LAST_SET_MAX_POINTS
       #и тут должна быть вторая процедура розыгрыша подачи по правилам волейбола
-      value = input("If team {} won the toss press A/a, else press B/b (or any key) for team {}:".format(
+      value = input("If team {} won the toss press A/a, else press B/b (or any key) for team {}: ".format(
         MATCH_DATA['A']['name'],
         MATCH_DATA['B']['name']))
       if (value.upper() == "A") or (value.upper() == "a"):
@@ -200,7 +200,7 @@ while not END_GAME:
     #базовая обработка ввода
     VALID_INPUT = False
     while not VALID_INPUT:
-      value = input("Who scored? If {} then press A/a, else B/b for {}. Type ? for more options".format(
+      value = input("Who scored? If {} then press A/a, else B/b for {}. Type ? for more options: ".format(
         MATCH_DATA['A']['name'],
         MATCH_DATA['B']['name']))
       if value.upper() in VALID_ANSWERS:
